@@ -28,11 +28,6 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 
     {{-- css --}}
-    <link rel="stylesheet" href="css/home1.css">
-    <link rel="stylesheet" href="css/new.css">
-    <link rel="stylesheet" href="css/team.css">
-    <link rel="stylesheet" href="css/abouts.css">
-    <link rel="stylesheet" href="css/partnership.css">
     {{-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @livewireStyles
@@ -41,7 +36,9 @@
 
 <body>
 
+    {{ $slot }}
 
+    @livewireScripts
 </body>
 
 </html>
