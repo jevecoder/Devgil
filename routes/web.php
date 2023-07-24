@@ -26,14 +26,9 @@ use Illuminate\Support\Facades\Route;
 //     Route::get('/', HomeIndex::class)->name('index');
 // });
 
-Route::prefix('home')->name('home.')->group(function () {
-
-    Route::get('/', HomeIndex::class)->name('index');
-});
-
-Route::prefix('About')->name('About.')->group(function () {
-
-    Route::get('/', AboutIndex::class)->name('index');
-});
-
 Route::get('/', HomeIndex::class)->name('index');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+

@@ -7,7 +7,7 @@
 
             <ul class="flex flex-col p-1 text-sm md:flex-row">
                 <li>
-                    <a href="{{ route('index') }}" class="p-3 {{request ()->is('index') ? 'active': ''}}">HOME</a>
+                    <a href="{{ route('About.index') }}" class="p-3 {{request ()->is('index') ? 'active': ''}}">HOME</a>
                     <a href="{{ route('About.index') }}" class="p-3 {{ request()->routeIs('index') ? :''}}">ABOUT</a>
                     <a href="" class="p-3">SERVICES</a>
                     <a href="" class="p-3">PORTFOLIO</a>
