@@ -2,8 +2,8 @@
 
 use App\Http\Livewire\Home\Index as HomeIndex;
 use App\Http\Livewire\About\Index as AboutIndex;
-use App\Http\Livewire\Services\Index as ServicesIndex;
-use App\Http\Livewire\Skills\Index as SkillsIndex;
+use App\Http\Livewire\Contact\Index as ContactIndex;
+use App\Http\Livewire\Projects\Index as ProjectsIndex;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeIndex::class)->name('index');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::prefix('about')->name('about.')->group(function () {
+    Route::get('/about', AboutIndex::class)->name('index');
+});
 
+Route::prefix('contact')->name('contact.')->group(function () {
+    Route::get('/contact', ContactIndex::class)->name('index');
+});
+
+Route::prefix('projects')->name('projects.')->group(function () {
+    Route::get('/projects', ProjectsIndex::class)->name('index');
+});

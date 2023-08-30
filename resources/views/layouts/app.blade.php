@@ -9,20 +9,25 @@
     <link rel="icon" href="{{ asset('img/logo_title.png') }}" type="image/icon type">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     {{-- css --}}
     {{-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @livewireStyles
-     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-     @vite('resources/css/app.css')
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
 </head>
 
-<body>
-    @extends('layouts.nav')
+<body class="pt-[69px] h-screen">
+    {{ $slot }}
+    @include('layouts.nav')
+    @include('layouts.side-menu')
+    @include('layouts.footer')
     @livewireScripts
 </body>
 
