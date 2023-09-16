@@ -23,10 +23,10 @@
 
 </head>
 
-<body class="pt-[69px] h-screen">
-    {{ $slot }}
-    @include('layouts.nav')
+<body class="relative bg-gray-800 h-full">
     @include('layouts.side-menu')
+    @include('layouts.nav')
+    {{ $slot }}
     @include('layouts.footer')
     @livewireScripts
 </body>
