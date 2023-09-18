@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeIndex::class)->name('index');
 
 Route::prefix('about')->name('about.')->group(function () {
-    Route::get('/about', AboutIndex::class)->name('index');
+    Route::get('/about', AboutIndex::class)->name('about');
 });
 
 Route::prefix('contact')->name('contact.')->group(function () {

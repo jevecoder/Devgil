@@ -1,5 +1,5 @@
 <div class="h-full">
-        <div class="fixed gap-4 h-full justify-center items-center flex flex-col inset-y-0 left-0 w-16">
+        <div class="fixed gap-4 h-full z-10 justify-center items-center flex flex-col inset-y-0 left-0 w-16">
              <!-- Facebook -->
         <a href="#" title="Share on Facebook">
             <svg class="fill-blue-700 text-white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
