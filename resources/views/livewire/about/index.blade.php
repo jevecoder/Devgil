@@ -23,32 +23,48 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="">
-        <img class=" h-full object-cover object-top" src="https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        <img class=" h-full object-cover object-top" src="{{asset('img/377757949_616040997111092_656681553343105129_n.jpg')}}" alt="">
       </div>
       <div class="flex bg-gray-100 p-10">
         <div class="mb-auto mt-auto max-w-lg">
           <h1 class="text-3xl uppercase">Jun Santilla</h1>
           <p class="font-semibold mb-5">Web Developer</p>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+          <p>"This is the day when I designed a website for our company using the Figma prototype."</p>
           <button class="bg-black rounded-md py-3 px-7 mt-6 text-white">Email Me</button>
         </div>
       </div>
     </div>
 
-    <!-- Header -->
-<header class="bg-white shadow-md">
-    <div class="flex justify-between items-center py-2 px-5 border-b-2 border-gray-200">
-        <div class="flex items-center">
-            <!-- Logo -->
-            <img src="https://www.emprenderconactitud.com/img/POC%20WCS%20(1).png" alt="Logo de la empresa" class="w-28 h-12 ml-6">
-        </div>
+    <main class="grid w-full min-h-screen text-gray-100 bg-gray-100 place-content-center">
+        <div class="flex flex-row">
+            <div>
+        <section x-data="skillDisplay"
+            class="p-6 space-y-6 bg-gray-800 rounded-xl md:grid md:grid-cols-2 md:gap-4 sm:space-y-0">
+            <div class="grid grid-cols-2 gap-6">
+                <template x-for="skill in skills">
+                    <button x-text="skill.title"
+                        class="px-4 py-2 text-xl text-gray-100 transition bg-blue-600 rounded-md h-14 w-44 hover:bg-blue-700"
+                        :class="(currentSkill.title == skill.title) && 'font-bold ring-2 ring-gray-100'"
+                        @click="currentSkill = skill"></button>
+                </template>
+            </div>
 
-        <!-- Botones de Registro y Contacto -->
-        <div class="flex items-center space-x-2">
-            <a href="#" class="px-2 py-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white font-semibold rounded-lg text-sm">Registro</a>
-            <a href="#" class="px-2 py-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white font-semibold rounded-lg text-sm">Contáctame</a>
-        </div>
-    </div>
-</header>
+            <div class="flex items-center justify-center" x-data="{ circumference: 2 * 22 / 7 * 120 }">
+                <svg class="transform -rotate-90 w-72 h-72">
+                    <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
+                        class="text-gray-700" />
 
+                    <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
+                        :stroke-dasharray="circumference"
+                        :stroke-dashoffset="circumference - currentSkill.percent / 100 * circumference"
+                        class="text-blue-500 " />
+                </svg>
+                <span class="absolute text-5xl" x-text="`${currentSkill.percent}%`"></span>
+        </section>
+            </div>
+
+            <div>sejfhiesufhes</div>
+        </div>
+    </main>
+@include('livewire.about.components.bar1')
 </div>
