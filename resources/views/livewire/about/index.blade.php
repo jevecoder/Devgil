@@ -7,14 +7,6 @@
             </svg>
             <blockquote>
                 <p class="text-2xl font-medium text-gray-900 dark:text-white">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
-            </blockquote>
-            <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
-                <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                    <div class="pr-3 font-medium text-gray-900 dark:text-white">Micheal Gough</div>
-                    <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at Google</div>
-                </div>
-            </figcaption>
         </figure>
     </div>
   </section>
@@ -23,13 +15,13 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="">
-        <img class=" h-full object-cover object-top" src="{{asset('img/377757949_616040997111092_656681553343105129_n.jpg')}}" alt="">
+        <img class=" h-full object-cover object-top" src="{{asset('img/seller.jpg')}}" alt="">
       </div>
       <div class="flex bg-gray-100 p-10">
         <div class="mb-auto mt-auto max-w-lg">
-          <h1 class="text-3xl uppercase">Jun Santilla</h1>
-          <p class="font-semibold mb-5">Web Developer</p>
-          <p>"This is the day when I designed a website for our company using the Figma prototype."</p>
+          <h1 class="text-3xl uppercase">Jeril GIl A, Labagnoy</h1>
+          <p class="font-semibold mb-5">Front-end Developer</p>
+          <p>"Hello, have a nice day! I'm Jeril Gil A. Labagnoy, and I offer website development services. You can contact me, and we can discuss and agree on the pricing. I also provide computer repair services. Additionally, I have various technologies for sale, so you can explore them on my websites. Thank you for visiting my portfolio. Feel free to hire me for your job offers."</p>
           <button class="bg-black rounded-md py-3 px-7 mt-6 text-white">Email Me</button>
         </div>
       </div>

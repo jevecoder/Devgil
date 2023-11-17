@@ -1,31 +1,90 @@
 <div  class="h-full pb-36 pt-[69px]">
-    <header>
+    <header class="relative w-full h-[600px]">
 
-        <div
-          class="relative overflow-hidden bg-cover bg-no-repeat"
-          style="
-            background-position: 50%;
-            background-image: url('https://tecdn.b-cdn.net/img/new/slides/146.webp');
-            height: 350px;
-          ">
-          <div
-            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-            style="background-color: rgba(0, 0, 0, 0.75)">
-            <div class="flex h-full items-center justify-center">
-              <div class="px-6 text-center text-white md:px-12">
-                <h1 class="mb-6 text-5xl font-bold">Welcome to my Portfolio</h1>
-                <h3 class="mb-8 text-3xl font-bold">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</h3>
-                <button
-                  type="button"
-                  class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                  data-te-ripple-init
-                  data-te-ripple-color="light">
-                  Hire me
-                </button>
+      <div class="slideshow-container">
+
+        <div class="relative">
+          <div class="mySlides fade">
+              <img class="w-full h-[600px]" src="{{ asset('img/bg.jpg') }}" alt="Image">
+              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
+                  <h1 class="font-bold text-6xl text-center">Welcome to my Portfolio</h1>
               </div>
-            </div>
           </div>
+      </div>
+      
+      <div class="relative">
+        <div class="mySlides fade">
+          <img class="w-full h-[600px]" src="{{asset('img/bg2.jpeg')}}">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
+            <h1 class="font-bold text-6xl text-center">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</h1>
+              </div>
         </div>
+        </div>
+        
+        <div class="relative">
+        <div class="mySlides fade">
+          <img class="w-full h-[600px]" src="{{asset('img/bg1.jpeg')}}">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
+            <h1 class="font-bold text-6xl text-center">CAPTION</h1>
+        </div>
+        </div>
+      </div>
+        
+        </div>
+        <br>
+        
+        <script>
+       let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    // let dots = document.getElementsByClassName("dot"); // I-comment out o tanggalin ito
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    // I-comment out ang sumusunod na lines
+    /*
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    */
+    slides[slideIndex-1].style.display = "block";
+    // I-comment out ang sumusunod na line
+    // dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000);
+}
+
+        </script>
+<style>
+  .mySlides {display: none;}
+  
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  </style>        
       </header>
 
       <section class="bg-white dark:bg-gray-900">
