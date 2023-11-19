@@ -5,30 +5,21 @@
 
         <div class="relative">
           <div class="mySlides fade">
-              <img class="w-full h-[600px]" src="{{ asset('img/bg.jpg') }}" alt="Image">
+              <img class="w-full h-[600px] opacity-30" src="{{ asset('img/bg1.jpeg') }}" alt="Image">
               <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-                  <h1 class="font-bold text-6xl text-center">Welcome to my Portfolio</h1>
+                  <h1 class="font-bold text-6xl w-[1000px] text-center">Welcome to my Portfolio</h1>
               </div>
           </div>
       </div>
       
       <div class="relative">
         <div class="mySlides fade">
-          <img class="w-full h-[600px]" src="{{asset('img/bg2.jpeg')}}">
+          <img class="w-full h-[600px] opacity-30" src="{{asset('img/bg2.jpeg')}}">
           <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-bold text-6xl text-center">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</h1>
+            <h1 class="font-bold text-6xl w-[1200px] text-center">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</h1>
               </div>
         </div>
         </div>
-        
-        <div class="relative">
-        <div class="mySlides fade">
-          <img class="w-full h-[600px]" src="{{asset('img/bg1.jpeg')}}">
-          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-bold text-6xl text-center">CAPTION</h1>
-        </div>
-        </div>
-      </div>
         
         </div>
         <br>
@@ -55,7 +46,7 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     // I-comment out ang sumusunod na line
     // dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 5000);
 }
 
         </script>
