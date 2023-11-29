@@ -7,23 +7,23 @@
           <div class="mySlides fade">
               <img class="w-full h-[600px] opacity-30" src="{{ asset('img/bg1.jpeg') }}" alt="Image">
               <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-                  <h1 class="font-bold text-6xl w-[1000px] text-center">Welcome to my Portfolio</h1>
+                  <p class="font-bold lg:text-6xl sm:text-base lg:w-[1000px] text-center">Welcome to my Portfolio</p>
               </div>
           </div>
       </div>
-      
+
       <div class="relative">
         <div class="mySlides fade">
           <img class="w-full h-[600px] opacity-30" src="{{asset('img/bg2.jpeg')}}">
           <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-bold text-6xl w-[1200px] text-center">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</h1>
+            <p class="font-bold lg:text-6xl sm:text-base lg:w-[1000px] text-center">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</p>
               </div>
         </div>
         </div>
-        
+
         </div>
         <br>
-        
+
         <script>
        let slideIndex = 0;
 showSlides();
@@ -52,8 +52,8 @@ function showSlides() {
         </script>
 <style>
   .mySlides {display: none;}
-  
-  
+
+
   /* Caption text */
   .text {
     color: #f2f2f2;
@@ -64,18 +64,18 @@ function showSlides() {
     width: 100%;
     text-align: center;
   }
-  
+
   /* Fading animation */
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
   }
-  
+
   @keyframes fade {
-    from {opacity: .4} 
+    from {opacity: .4}
     to {opacity: 1}
   }
-  </style>        
+  </style>
       </header>
 
       <section class="bg-white dark:bg-gray-900">
@@ -87,9 +87,28 @@ function showSlides() {
                     Get started
                     <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
-                <a href="#next" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                <a href="#next" id="downloadButton" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                     Download my resume
                 </a>
+                <script>
+document.getElementById("downloadButton").addEventListener("click", function() {
+    // Gumawa ng link para sa PDF file
+    var pdfFile = './img/JERIL RESUME.pdf';
+    var link = document.createElement('a');
+    link.href = pdfFile;
+
+    // Itakda ang pangalan ng file para sa download
+    link.download = encodeURIComponent('JERIL RESUME.pdf');
+
+    // Idagdag ang link sa dokumento at i-click ito
+    document.body.appendChild(link);
+    link.click();
+
+    // Alisin ang link pagkatapos ng pag-click
+    document.body.removeChild(link);
+});
+d
+                </script>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
                 <img src="{{asset('img/profile.png')}}" alt="mockup">
