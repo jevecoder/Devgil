@@ -120,7 +120,7 @@ d
         <div class="p-2 bg-white">
             <p class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Project Comply</p>
         </div>
-    <div class="grid grid-flow-col gap-2 bg-white lg:grid-cols-4 sm:grid-rows-4 p-7">
+    <div class="grid gap-2 bg-white lg:grid-cols-4 sm:grid-rows-1 p-7">
         <div class="flex items-center justify-center">
             <button class="card" id="cards">
                 <div class="card-info">
