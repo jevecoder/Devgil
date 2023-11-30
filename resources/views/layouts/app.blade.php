@@ -13,17 +13,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     {{-- css --}}
-    {{-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @livewireStyles
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @vite('resources/css/app.css')
     <link href="/dist/output.css" rel="stylesheet">
+    <script src="{{asset('js')}}"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
 </head>
 
-<body class="relative bg-gray-800 h-full">
+<body class="relative h-full">
+
+    @include('layouts.loading')
     @include('layouts.side-menu')
     @include('layouts.nav')
     {{ $slot }}
