@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="bg-black text-white"><a href="{{route('index')}}">Click this</a></div>
+    <div class="bg-black text-white"><a href="/resources/views/livewire/home/index.blade.php">Click this</a></div>
 </body>
 </html>
